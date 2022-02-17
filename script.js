@@ -44,8 +44,8 @@ class Point {
     this.py = pyNew;
     this.vx = (this.px - this.pxOld) / dt;
     this.vy = (this.py - this.pyOld) / dt;
-    this.ax = wind - 6 * Math.PI * 18e-3 * this.sx * this.vx;
-    this.ay = gravity - 6 * Math.PI * 18e-3 * this.sy * this.vy;
+    this.ax = wind - 6 * Math.PI * 18e-2 * this.sx * this.vx;
+    this.ay = gravity - 6 * Math.PI * 18e-2 * this.sy * this.vy;
   }
 
   restrain() {
@@ -75,7 +75,7 @@ class Constraint {
     this.p1 = p1;
     this.p2 = p2;
     this.baseDistance = b;
-    this.stiffness = 1e9;
+    this.stiffness = 1e4;
   }
 
   update() {
